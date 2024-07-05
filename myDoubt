@@ -1,0 +1,14 @@
+ **WebClient.Builder
+** @LoadBalanced
+
+
+//--------------
+               //-------service discovery
+     Microserivices can run on multiple instances and can run on any port and ip address
+     so to manage all the instances,port and ip addresses we use eureka server
+In service discovery
+after all the services register themselves with eureka server
+all the services stores  copy of registry of all the services in its local storage
+whenever any services call another service it search from its own local copy if not found
+then go to eureka server to get the service's information to call
+even if our eureka server goes down our services still can call another services
